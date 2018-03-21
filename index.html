@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>My Processing Page</title>
+        <script src="processing.min.js"></script>
+        <style>
+            body { margin: 0 !important;
+        padding: 0 !important;
+                font-family: 'Droid Sans', serif;
+                font-size:20px;}
+            #mysketch3 {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index:-100;
+                overflow:hidden;
+            }
+                
+            ul {
+                position:fixed;
+                right:0;
+                list-style-type: none;
+                margin: 0;
+                padding: 20px 40px;
+                overflow: hidden;
+            }
+
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                background-color:black;
+                text-decoration: none;
+                transition: all 0.6s;
+            }
+
+            li a:hover {
+                transform:translate(-10%, 0);
+                background-color: yellow;
+                color: black;
+                padding: 20px, 20px;
+                
+            }
+            #namelink{
+                text-decoration:none;
+                color:black;
+            }
+            #name {
+                position: fixed;
+                top:50%;
+                left:50%;
+                transform: translate(-50%, -50%);
+                width: 300px;
+                height: 100px;
+                padding: 15px;
+                background-color: yellow;
+                transition: all 0.5s;
+            }
+            #name:hover{
+                width:320px;
+                height:120px;
+                box-shadow: 10px 10px white;
+                top:49%;
+                left:49%;
+
+            }
+            #namehead {
+                text-align:center;
+                top:50%;
+                left:50%;
+            }
+            
+        </style>
+        <script type="text/javascript">
+        function size(){
+            width = window.innerWidth
+                || document.documentElement.clientWidth
+                || document.body.clientWidth;
+
+            height = window.innerHeight
+                || document.documentElement.clientHeight
+                || document.body.clientHeight;
+        };
+        function resizeProcess(){
+            var pjs = Processing.getInstanceById("mysketch3");
+            pjs.resize(width, height);
+        }
+        size();
+        window.addEventListener('resize', size, true);
+        window.addEventListener('resize', resizeProcess, true);
+        
+        </script>
+    </head>
+    
+    <body>
+        
+        <canvas id="mysketch3" data-processing-sources="mysketch3.pde"/></canvas>
+        
+        <ul id="links">
+            <li><a  target="_blank" href="https://plus.google.com/u/0/+MaxTyler">GOOGLE PLUS</a></li>
+            <li><a target="_blank" href="https://soundcloud.com/max-tyler-1">SOUNDCLOUD</a></li>
+            <li><a target="_blank" href="https://maxatyler.bandcamp.com/">BANDCAMP</a></li>
+            <li><a target="_blank" href="https://github.com/mtyler88">GITHUB</a></li>
+        </ul>
+        
+        <div id="name">
+        <a id="namelink" target="_blank" href="https://www.youtube.com/watch?v=y9K18CGEeiI"><h1 id="namehead">MAX TYLER</h1></a>
+        </div>
+
+    </body>
+</html>
