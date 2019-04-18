@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-04-18 Thu 10:45 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="outline-container-orgce8314e" class="outline-2">
+<h2 id="orgce8314e"><span class="section-number-2">1</span> Things to install</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgb1437d6" class="outline-3">
+<h3 id="orgb1437d6"><span class="section-number-3">1.1</span> <span class="todo TODO">TODO</span> Linting</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-orge0976c5" class="outline-4">
+<h4 id="orge0976c5"><span class="section-number-4">1.1.1</span> Add flycheck to emacs</h4>
+</div>
+</div>
+<div id="outline-container-org87dec5e" class="outline-3">
+<h3 id="org87dec5e"><span class="section-number-3">1.2</span> <span class="todo TODO">TODO</span> Fix keymappings</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org38e4a04" class="outline-4">
+<h4 id="org38e4a04"><span class="section-number-4">1.2.1</span> <span class="todo TODO">TODO</span> Look at evil-leader to see if this is still useful</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+It's quite an old extension, so there might be something better now
+</p>
+</div>
+</div>
+<div id="outline-container-org32cef51" class="outline-4">
+<h4 id="org32cef51"><span class="section-number-4">1.2.2</span> <span class="todo TODO">TODO</span> Look at hydra</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+Don't know if this is useful with evil?
+</p>
+</div>
+</div>
+<div id="outline-container-org7a792cc" class="outline-4">
+<h4 id="org7a792cc"><span class="section-number-4">1.2.3</span> <span class="todo TODO">TODO</span> Fix helm keybindings</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<p>
+Use C-{h,j,k,l} rather than M-{&#x2026;} for moving between things in a helm buffer
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd47d229" class="outline-3">
+<h3 id="orgd47d229"><span class="section-number-3">1.3</span> <span class="todo TODO">TODO</span> Completion</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Add in some completion package
+</p>
+</div>
+<div id="outline-container-orgaab8de7" class="outline-4">
+<h4 id="orgaab8de7"><span class="section-number-4">1.3.1</span> <span class="todo TODO">TODO</span> Look for a good completion package</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org4c98203" class="outline-2">
+<h2 id="org4c98203"><span class="section-number-2">2</span> basic Setup</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orga38e9cd" class="outline-3">
+<h3 id="orga38e9cd"><span class="section-number-3">2.1</span> Set Some Default Variables</h3>
+<div class="outline-text-3" id="text-2-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #a020f0;">setq-default</span>
+ confirm-kill-emacs 'yes-or-no-p    <span style="color: #b22222;">; </span><span style="color: #b22222;">confirmation when killing emacs</span>
+ indent-tabs-mode nil           <span style="color: #b22222;">; </span><span style="color: #b22222;">don't use tabs to indent</span>
+ select-enable-clipboard t      <span style="color: #b22222;">; </span><span style="color: #b22222;">use the system clipboard</span>
+ inhibit-startup-screen t
+ initial-scratch-message nil
+ initial-major-mode 'org-mode
+ tab-width 4)               <span style="color: #b22222;">; </span><span style="color: #b22222;">tab width to 4</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org730e768" class="outline-3">
+<h3 id="org730e768"><span class="section-number-3">2.2</span> yes-or-no to y-or-n</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Stop asking for me to type in the full "yes" or "no"
+when a "y" or "n" would do&#x2026;
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(fset 'yes-or-no-p 'y-or-n-p)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfaffbc4" class="outline-3">
+<h3 id="orgfaffbc4"><span class="section-number-3">2.3</span> Turn off cursor blinking</h3>
+<div class="outline-text-3" id="text-2-3">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(blink-cursor-mode 0)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org7f9342f" class="outline-3">
+<h3 id="org7f9342f"><span class="section-number-3">2.4</span> Set a Backup Directory</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+Use this directory instead of pumping out backup files into the wild
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #a020f0;">setq</span> backup-directory-alist '((<span style="color: #8b2252;">"."</span> . <span style="color: #8b2252;">"~/.emacs.d/backup"</span>))
+      backup-by-copying t
+      version-control t
+      delete-old-versions t
+      kept-new-versions 20
+      kept-old-versions 5)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org44b4550" class="outline-3">
+<h3 id="org44b4550"><span class="section-number-3">2.5</span> Add cargo bin to exec path</h3>
+<div class="outline-text-3" id="text-2-5">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(add-to-list 'exec-path <span style="color: #8b2252;">"~/.cargo/bin"</span>)
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbca8664" class="outline-2">
+<h2 id="orgbca8664"><span class="section-number-2">3</span> Other Packages</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org1c54e65" class="outline-3">
+<h3 id="org1c54e65"><span class="section-number-3">3.1</span> Undo tree</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+This package turns the undo tangle emacs usually has into an undo tree
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #a020f0;">use-package</span> <span style="color: #008b8b;">undo-tree</span>
+<span style="color: #483d8b;">:ensure</span> t <span style="color: #b22222;">;; </span><span style="color: #b22222;">install the package if it's not installed already</span>
+<span style="color: #483d8b;">:config</span>
+(global-undo-tree-mode) <span style="color: #b22222;">;; </span><span style="color: #b22222;">start undo-tree</span>
+)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcf1a3ff" class="outline-3">
+<h3 id="orgcf1a3ff"><span class="section-number-3">3.2</span> EVIL</h3>
+<div class="outline-text-3" id="text-3-2">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #a020f0;">use-package</span> <span style="color: #008b8b;">evil</span>
+<span style="color: #483d8b;">:ensure</span> t <span style="color: #b22222;">;; </span><span style="color: #b22222;">install the package if it's not installed already</span>
+<span style="color: #483d8b;">:init</span> 
+(<span style="color: #a020f0;">setq</span> evil-search-module 'evil-search)
+(<span style="color: #a020f0;">setq</span> evil-want-integration t)
+(<span style="color: #a020f0;">setq</span> evil-want-keybinding nil)
+(<span style="color: #a020f0;">setq</span> evil-vsplit-window-right t) <span style="color: #b22222;">; </span><span style="color: #b22222;">split to right</span>
+(<span style="color: #a020f0;">setq</span> evil-split-window-below t) <span style="color: #b22222;">; </span><span style="color: #b22222;">split below</span>
+(<span style="color: #a020f0;">setq</span> evil-want-C-u-scroll t) <span style="color: #b22222;">; </span><span style="color: #b22222;">scroll with ctrl-u</span>
+<span style="color: #483d8b;">:config</span>
+(evil-mode 1)
+)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org574a48a" class="outline-3">
+<h3 id="org574a48a"><span class="section-number-3">3.3</span> EVIL-magit</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Make evil work with magit
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #a020f0;">use-package</span> <span style="color: #008b8b;">evil-magit</span>
+<span style="color: #483d8b;">:after</span> evil
+<span style="color: #483d8b;">:ensure</span> t <span style="color: #b22222;">;; </span><span style="color: #b22222;">install the package if it's not installed already</span>
+)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orga8232e0" class="outline-3">
+<h3 id="orga8232e0"><span class="section-number-3">3.4</span> EVIL collection</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+A collection of keybindings which cover the rest of the stuff evil doesn't
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #a020f0;">use-package</span> <span style="color: #008b8b;">evil-collection</span>
+<span style="color: #483d8b;">:after</span> evil <span style="color: #b22222;">;; </span><span style="color: #b22222;">make sure it's started after evil</span>
+<span style="color: #483d8b;">:ensure</span> t <span style="color: #b22222;">;; </span><span style="color: #b22222;">install the package if it's not installed already</span>
+<span style="color: #483d8b;">:custom</span> 
+(evil-collection-setup-minibuffer t)
+<span style="color: #483d8b;">:config</span>
+(evil-collection-init)
+)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgade3702" class="outline-3">
+<h3 id="orgade3702"><span class="section-number-3">3.5</span> Which-key</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+Which-key is located <a href="https://github.com/justbur/emacs-which-key">here</a>, and allows the user to see mapped keys
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #a020f0;">use-package</span> <span style="color: #008b8b;">which-key</span>
+<span style="color: #483d8b;">:ensure</span> t <span style="color: #b22222;">;; </span><span style="color: #b22222;">install the package if it's not installed already</span>
+<span style="color: #483d8b;">:config</span>
+(which-key-mode)
+)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org90dc765" class="outline-3">
+<h3 id="org90dc765"><span class="section-number-3">3.6</span> Magit</h3>
+<div class="outline-text-3" id="text-3-6">
+<p>
+A git porcelain for emacs
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #a020f0;">use-package</span> <span style="color: #008b8b;">magit</span>
+<span style="color: #483d8b;">:ensure</span> t <span style="color: #b22222;">;; </span><span style="color: #b22222;">install the package if it's not installed already</span>
+)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org52c7eb8" class="outline-3">
+<h3 id="org52c7eb8"><span class="section-number-3">3.7</span> Emacs-async</h3>
+<div class="outline-text-3" id="text-3-7">
+<p>
+To allow for asynchronous stuff
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #a020f0;">use-package</span> <span style="color: #008b8b;">async</span>
+<span style="color: #483d8b;">:ensure</span> t <span style="color: #b22222;">;; </span><span style="color: #b22222;">install the package if it's not installed already</span>
+)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org0312589" class="outline-3">
+<h3 id="org0312589"><span class="section-number-3">3.8</span> popup-el</h3>
+<div class="outline-text-3" id="text-3-8">
+<p>
+A popup interface for emacs
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #a020f0;">use-package</span> <span style="color: #008b8b;">popup</span>
+<span style="color: #483d8b;">:ensure</span> t <span style="color: #b22222;">;; </span><span style="color: #b22222;">install the package if it's not installed already</span>
+)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbca7e97" class="outline-3">
+<h3 id="orgbca7e97"><span class="section-number-3">3.9</span> Helm</h3>
+<div class="outline-text-3" id="text-3-9">
+<p>
+A popup finder
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #a020f0;">use-package</span> <span style="color: #008b8b;">helm</span>
+<span style="color: #483d8b;">:ensure</span> t <span style="color: #b22222;">;; </span><span style="color: #b22222;">install the package if it's not installed already</span>
+<span style="color: #483d8b;">:config</span> 
+(helm-mode 1)
+(global-set-key (kbd <span style="color: #8b2252;">"M-x"</span>) 'helm-M-x)
+(global-set-key (kbd <span style="color: #8b2252;">"C-x C-f"</span>) 'helm-find-files)
+)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7b8954e" class="outline-3">
+<h3 id="org7b8954e"><span class="section-number-3">3.10</span> Projectile</h3>
+<div class="outline-text-3" id="text-3-10">
+<p>
+For managing projects in emacs
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #a020f0;">use-package</span> <span style="color: #008b8b;">projectile</span>
+<span style="color: #483d8b;">:ensure</span> t <span style="color: #b22222;">;; </span><span style="color: #b22222;">install the package if it's not installed already</span>
+<span style="color: #483d8b;">:config</span> 
+(projectile-mode)
+)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1cc9b09" class="outline-3">
+<h3 id="org1cc9b09"><span class="section-number-3">3.11</span> Helm-projectile</h3>
+<div class="outline-text-3" id="text-3-11">
+<p>
+For integration of helm and projectile
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #a020f0;">use-package</span> <span style="color: #008b8b;">helm-projectile</span>
+<span style="color: #483d8b;">:ensure</span> t <span style="color: #b22222;">;; </span><span style="color: #b22222;">install the package if it's not installed already</span>
+<span style="color: #483d8b;">:after</span> (projectile helm)
+<span style="color: #483d8b;">:config</span> 
+(helm-projectile-on)
+(<span style="color: #a020f0;">setq</span> projectile-completion-system 'helm)
+)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd217905" class="outline-3">
+<h3 id="orgd217905"><span class="section-number-3">3.12</span> Helm-rg</h3>
+<div class="outline-text-3" id="text-3-12">
+<p>
+For use of ripgrep with helm
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #a020f0;">use-package</span> <span style="color: #008b8b;">helm-rg</span>
+<span style="color: #483d8b;">:ensure</span> t <span style="color: #b22222;">;; </span><span style="color: #b22222;">install the package if it's not installed already</span>
+<span style="color: #483d8b;">:after</span> (projectile helm)
+)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org96f91c2" class="outline-3">
+<h3 id="org96f91c2"><span class="section-number-3">3.13</span> htmlize</h3>
+<div class="outline-text-3" id="text-3-13">
+<p>
+This is used to convert a buffer into html, to look all nice.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #a020f0;">use-package</span> <span style="color: #008b8b;">htmlize</span>
+<span style="color: #483d8b;">:ensure</span> t <span style="color: #b22222;">;; </span><span style="color: #b22222;">install the package if it's not installed already</span>
+)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2019-04-18 Thu 10:45</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
